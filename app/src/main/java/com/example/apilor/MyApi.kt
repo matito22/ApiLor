@@ -7,4 +7,7 @@ import retrofit2.http.GET
 interface MyApi {
     @GET("characters/")
     fun getCharacters(): Call<Post>
+
+    @GET("realms/")
+    fun getRealms(): Call<Post2>
 }

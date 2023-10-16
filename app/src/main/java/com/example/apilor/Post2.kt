@@ -2,13 +2,8 @@ package com.example.apilor
 
 import com.squareup.moshi.JsonClass
 
-//serializar/deserializar la informacion
 @JsonClass(generateAdapter = true)
-data class Post(
+data class Post2(
     var count:Int,
-    var results:List<ResultItem.Character>
+    var results:List<ResultItem.Realm>
 )
-
-
-
-

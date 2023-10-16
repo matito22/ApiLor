@@ -63,33 +63,34 @@ class CardActivity : AppCompatActivity() ,CardItemClickListener{
 
     override fun onCardItemClick(cardItem: CardItem) {
         val intent = Intent(this, ApiExample::class.java)
+        intent.putExtra("cardItemTitle", cardItem.title)
         startActivity(intent)
     }
 
     private fun getCardItems(): MutableList<CardItem> {
         val items=mutableListOf<CardItem>()
-        items.add(CardItem(R.drawable.gondolin, "gondolin",1))
-        items.add(CardItem(R.drawable.rivendel, "rivendel",2))
-        items.add(CardItem(R.drawable.mapa, "minas tirith",3))
-        items.add(CardItem(R.drawable.osgiliath, "osgiliath",4))
-        items.add(CardItem(R.drawable.bree, "bree",5))
-        items.add(CardItem(R.drawable.edoras, "edoras",6))
-        items.add(CardItem(R.drawable.hobbiton, "hobbiton",7))
+        items.add(CardItem(R.drawable.hobbiton, "The Shire",1))
+        items.add(CardItem(R.drawable.arnor, "Arnor",2))
+        items.add(CardItem(R.drawable.valinor, "Valinor",3))
+        items.add(CardItem(R.drawable.woodlandrealm, "Woodland Realm",5))
+        items.add(CardItem(R.drawable.mountain, "Lonely Mountain",6))
+        items.add(CardItem(R.drawable.osgiliath, "Anórien",7))
+
         return items
     }
 
     private fun getSecondCardItems(): MutableList<CardItem> {
         val items = mutableListOf<CardItem>()
-        items.add(CardItem(R.drawable.aragorn, "aragorn",5))
-        items.add(CardItem(R.drawable.bilbo, "bilbo baggins",4))
-        items.add(CardItem(R.drawable.boromir, "boromir",10))
-        items.add(CardItem(R.drawable.frodo, "frodo baggins",1))
-        items.add(CardItem(R.drawable.gandalf, "gandalf",3))
-        items.add(CardItem(R.drawable.gimli, "gimli",9))
-        items.add(CardItem(R.drawable.legolas, "legolas",8))
-        items.add(CardItem(R.drawable.merry, "merry",6))
-        items.add(CardItem(R.drawable.pippin, "pippin",7))
-        items.add(CardItem(R.drawable.sam, "sam gamgee",2))
+        items.add(CardItem(R.drawable.aragorn, "Aragorn II",5))
+        items.add(CardItem(R.drawable.bilbo, "Bilbo Baggins",4))
+        items.add(CardItem(R.drawable.boromir, "Boromir",10))
+        items.add(CardItem(R.drawable.frodo, "Frodo Baggins",1))
+        items.add(CardItem(R.drawable.gandalf, "Gandalf",3))
+        items.add(CardItem(R.drawable.gimli, "Gimli",9))
+        items.add(CardItem(R.drawable.legolas, "Legolas",8))
+        items.add(CardItem(R.drawable.merry, "Meriadoc Brandybuck",6))
+        items.add(CardItem(R.drawable.pippin, "Peregrin Took",7))
+        items.add(CardItem(R.drawable.sam, "Samwise Gamgee",2))
 
         return items
     }

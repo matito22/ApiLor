@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ApiExample"
+    android:background="@color/verde"
     android:orientation="vertical">
 
         <ScrollView
@@ -13,10 +14,13 @@
             android:layout_weight="1">
                 <TextView
                 android:id="@+id/tvServicioRest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_margin="10dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    style="@style/TextAppearance.Material3.LabelMedium"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                   />
 
         </ScrollView>
 
